@@ -89,7 +89,7 @@
 
     // console.log(e.target)
     
-    this.append(dragElem);
+    this.append(window.dragElem);
     // this.classList.remove('hover');
   }
 
