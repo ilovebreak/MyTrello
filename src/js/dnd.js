@@ -59,7 +59,7 @@
           const placeToInsert = document.querySelector('.place-to-insert')
           if (placeToInsert) placeToInsert.remove()
           console.log('place-to-insert', document.querySelector('.place-to-insert'))
-        }, 800)
+        }, 500)
      }
     // this.classList.remove('hover');
   }
@@ -88,6 +88,7 @@
     // }
 
     // console.log(e.target)
+    
     this.append(dragElem);
     // this.classList.remove('hover');
   }

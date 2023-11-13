@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', loadFromStorage)
 const cards = document.querySelectorAll('.card'), // перетаскиваемые блоки
     containers = document.querySelectorAll('.cards-container'); // целевые блоки для "бросания" в них перетаскиваемых элементов
 window.dragElem = null; //текущий перетаскиваемый элемент
-window.placetoInsertExists = false // задаем переменную для того, чтобы место для 
+window.placetoInsertExists = false
 
 // cards.forEach(card => {
 //     card.addEventListener('dragstart', startDragCard)
