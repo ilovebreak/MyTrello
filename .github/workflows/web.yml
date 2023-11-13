@@ -42,7 +42,10 @@ jobs:
         run: npm run build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v2
+	with:
+          token: ***
+	  enablement: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
