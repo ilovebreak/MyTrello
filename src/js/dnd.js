@@ -1,24 +1,20 @@
 // let dragElem = null; //текущий перетаскиваемый элемент
 
+let placeToInsert
+
  export function startDragCard(){
     console.log('dragstart');
     window.dragElem = this;
-    // setTimeout (()=> {
-    // //   this.classList.add('hide');
-    // }, 0);
   }
 
   export function endDragCard(){
     console.log('dragend');
     window.dragElem = null;
-    // this.classList.remove('hide');
   }
 
   export function dragContainerOver(e) {
     // console.log('dragover');
     e.preventDefault();
-
-    // this.classList.add('hover');
   }
 
   export function dragContainerEnter(e) {
@@ -44,85 +40,32 @@
         } 
     }
 
-
-    // this.classList.add('hover');
   }
 
   export function dragContainerLeave() {
      console.log('dragleave');
      console.log(window.placeToInsertExists)
      console.log(document.querySelector('.place-to-insert'))
-     const placeToInsert = document.querySelector('.place-to-insert')
      if (window.placeToInsertExists) {
         setTimeout(() => {
           window.placeToInsertExists = false
-          const placeToInsert = document.querySelector('.place-to-insert')
+          placeToInsert = document.querySelector('.place-to-insert')
           if (placeToInsert) placeToInsert.remove()
-          console.log('place-to-insert', document.querySelector('.place-to-insert'))
-        }, 500)
+        }, 1000)
      }
-    // this.classList.remove('hover');
   }
 
   export function dropInContainer(e) {
     console.log('drop');
-    // console.log(this)
-    // console.log(typeof(this))
-    // console.log('caretPositionFromPoint', document.caretPositionFromPoint)
-    // console.log('caretRangeFromPoint', document.caretRangeFromPoint)
-    
-    // if (document.caretPositionFromPoint) {
-    
-    //     let range = document.caretPositionFromPoint(e.clientX, e.clientY);
-    //     let textNode = range.offsetNode;
-    //     let offset = range.offset;
-    //     console.log(textNode, offset);
-    
-    // }  else if (document.caretRangeFromPoint) {
+   
+    // this.append(window.dragElem);
+    if (window.placeToInsertExists) {
+      placeToInsert = document.querySelector('.place-to-insert')
+      console.log('place-to-insert', placeToInsert)
+      placeToInsert.parentElement.insertBefore(window.dragElem, placeToInsert)
+      placeToInsert.remove()
+      window.placeToInsertExists = false
+    }
 
-    //     let range = document.caretRangeFromPoint(e.clientX, e.clientY);
-    //     let textNode = range.startContainer;
-    //     let offset = range.startOffset;
-    //     console.log(textNode, offset);
-        
-    // }
-
-    // console.log(e.target)
-    
-    this.append(window.dragElem);
-    // this.classList.remove('hover');
   }
 
-
-// let dragElem
-
-// export function onMouseMove (e) {
-//     e.target.style.left = e.clientY + 'px';
-//     e.target.style.top = e.clientY + 'px';
-// }
-
-// export function onMouseDown(e) {
-//     e.preventDefault();
-//     console.log(e.target)
-//     if (!e.target.classList.contains('card-text')) {
-//         actualElement = e.target
-//     } else {
-//         actualElement = e.target.parentElement
-//     }
-
-//     actualElement.style.position = 'absolute'
-        
-//     onMouseMove(e)
-//     // e.target.style.left = e.pageX - e.target.offsetWidth / 2 + 'px';
-//     // e.target.style.top = e.pageY - e.target.offsetHeight / 2 + 'px';
-//     document.body.appendChild(actualElement)
-//     actualElement.style.zIndex = 1000
-
-// }
-
-// export function onMouseUp (e) {
-//     e.target.removeEventListener('mouseup', onMouseUp);
-//     e.target.removeEventListener('mousemove', onMouseMove);
-//     // document.onmousemove = null;
-//     // ball.onmouseup = null;
-// }
