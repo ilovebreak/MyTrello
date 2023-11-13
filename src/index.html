@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Project</title>
+</head>
+<body>
+  <h1>Список задач MyTrello</h1>
+  <div class="board">
+    <div class="cards-container" id="todo">
+        <div class="cards-container-header">TODO</div>
+        <!-- <div class="card" draggable="true">
+          <div class="delete-card">&#10006</div>
+          <div class="card-text">task</div>
+        </div> -->
+        <button class="add-container">
+          <textarea class="usertext hidden" placeholder="Напишите здесь что-нибудь..."></textarea>
+          <div class="save-cancel-container">
+            <div class="add-button">+ Add another card</div>
+            <div class="cancel-button hidden">&#10006</div> 
+          </div>
+        </button>
+    </div>
+    <div class="cards-container" id="in progress">
+      <div class="cards-container-header">IN PROGRESS</div>
+      <button class="add-container">
+        <textarea class="usertext hidden" placeholder="Напишите здесь что-нибудь..."></textarea>
+        <div class="save-cancel-container">
+          <div class="add-button">+ Add another card</div>
+          <div class="cancel-button hidden">&#10006</div> 
+        </div>
+      </button>
+    </div>
+    <div class="cards-container" id="done">
+      <div class="cards-container-header">DONE</div>
+      <button class="add-container">
+        <textarea class="usertext hidden" placeholder="Напишите здесь что-нибудь..."></textarea>
+        <div class="save-cancel-container">
+          <div class="add-button">+ Add another card</div>
+          <div class="cancel-button hidden">&#10006</div> 
+        </div>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

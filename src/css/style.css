@@ -1,0 +1,154 @@
+body {
+    text-align: center;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #5a86c4;
+    display: block;
+}
+
+.board {
+    color: #606060;
+    background-color: #5a86c4;
+    width: 70%;
+    min-width: 620px;
+    max-width: 780px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    font-size: large;
+    height: 100%;
+    width: 30%;
+    min-width: 178px;
+    margin: 10px auto;
+    padding: 1%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    background-color: white;
+    width: auto;
+    margin: 2%;
+    border-radius: 5px;
+    padding: 4%; 
+}
+
+.card:hover {
+    border: 1px solid black;
+}
+
+
+.delete-card {
+   width: fit-content;
+   right: 7%;
+   position: absolute;
+   padding-left: 5px;
+   padding-right: 5px;
+}
+
+.delete-card::after {
+    content: "\2716";
+}
+
+
+.add-container {
+    background-color: inherit;
+    border: none;
+    width: auto;
+    margin: 2%;
+    font-size: medium;
+    text-align: left;
+    color: #606060;
+    border-radius: 10px;
+    padding: 4%;
+    display: block;
+}
+
+.add-container.inputview {
+    border: 1px solid black;
+    background-color: #aec7e9;
+}
+.save-cancel-container {
+    display: flex;
+}
+.add-button {
+    background-color: inherit;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 2%;
+    font-size: medium;
+    text-align: left;
+    color: #606060;
+    border-radius: 10px;
+    padding: 4%;
+}
+
+.add-button:hover, .delete-card:hover {
+    background-color: #b0afaf;
+    opacity: 80%;
+    color: black;
+}
+
+.add-button.inputview {
+    background-color: #70a4ee;
+    width: 70%;
+    padding: 4%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.add-button.inputview:hover {
+    background-color: #3b5882;
+    color: black;
+}
+
+textarea {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    resize: none;
+    }
+
+.cancel-button {
+    /* background-color: lightcoral; */
+    /* width: 40%; */
+    font-size: larger;
+    padding: 2%;
+    border-radius: 10px;
+    margin: 2%;
+    text-align: center;
+}
+
+.cancel-button:hover {
+    background-color: #9c5353;
+    color: black;
+}
+
+.place-to-insert {
+    border: 3px dashed grey;
+    border-radius: 10px;
+    color: #999898;
+    font-size: larger;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.hidden {
+    display: none;
+}
